@@ -1,0 +1,31 @@
+f = open("Yo")
+t = f.read()
+d1 = dict()
+c = 0
+k = t.split()
+for i in k:
+    if i in d1:
+        d1[i] = d1[i]+1
+
+    else:
+        d1[i] = 1
+        c = c+1
+for i in d1:
+    print (i,d1[i])
+maxi = 0
+l1 = list()
+for i in d1:
+    if maxi < d1[i] or maxi == 0:
+        maxi = d1[i]
+for i in d1:
+    if(d1[i]==maxi):
+        l1.append(i)
+
+print("the words occuring most times are ",end="")
+for i in l1:
+    print("'"+i+"'",end="  ")
+print("with frequency = ",end="")
+print(maxi)
+
+
+
